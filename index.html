@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sunday class Competition</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: #9933cc;
+  background-image: url("2021-08-25-18-03-21-023.jpg");
+background-position: top;
+  text-align: center;
+  color: #ffffff;
+  padding: 50px;
+  text-shadow: black;
+  position: relative;
+  margin: 0;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+height: 200px;
+  padding: 15px;
+ 
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+.container {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 0px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+#contact h4 {
+  margin: 5px 0 5px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+#contact h5 {
+  margin: 0 40px 0;
+  font-size: 13px;
+  font-weight: 10;
+  color:rgb(34, 34, 34);
+}
+#contact instructions{
+  font-size: 13px;
+  margin: 0 40px 0;
+  font-style:italic;
+}
+#contact instructions ul{
+  margin: 5px 40px 0;
+}
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+#contact button[type="submit"]:disabled {
+  background-color: #97d19a ;
+}
+.copyright {
+  text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+</style>
+</head>
+<body>
+  <script type="text/javascript">var submitted=false;</script>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='https://sundayclasses.github.io/Sunday_Class/form.html';}"></iframe>
+<div class="header">
+<h1>CSI Christ Church Virugambakkam</h1>
+  <h3>50th Golden Jubilee Celebration</h3>
+  <h2>Sunday School</h2>
+</div>
+
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+    <ul style="text-align: center;">
+      <li><h2>Event Date:</h2><br>
+      <h4 style="margin-top: -10px;">26th September 2021</h4>
+      </li>
+    
+    </ul>
+  </div>
+
+  <div class="col-6 col-s-9">
+    <div class="container">  
+        <form id="contact" target="hidden_iframe" onsubmit="submitted=true" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeZYHtl1ZlgyV2Y87tOFssJuxpKKgtv_Lfe2tNgpWbSLUarrg/formResponse" method="post">
+          <h3>Registration Form</h3>
+          <h4>Name :</h4>
+          <fieldset>
+            <input placeholder="Your name" type="text" tabindex="1" name="entry.893538765"  required autofocus>
+          </fieldset>
+          <h4>Date of birth :</h4>
+          <fieldset>
+            <input id="docb" placeholder="Your date of birth" type="date" name="entry.1678562212" tabindex="2" onchange="Display();" required>
+          </fieldset>
+          <h4>Father's Name:</h4>
+          <fieldset>
+            <input placeholder="Your Father's Name" type="text" name="entry.740647680" tabindex="3" required>
+          </fieldset>
+          <h4>Membership Number :</h4>
+          <fieldset>
+            <input placeholder="Your Membership Number" type="text" name="entry.206528177" tabindex="4" required>
+          </fieldset>
+          <h4>Mobile Number :</h4>
+          <fieldset>
+            <input placeholder="Your Mobile Number" type="tel" name="entry.811217135" tabindex="5" required>
+          </fieldset>
+          <fieldset>
+            <h4 id="hidden" style="display: none;" >Select the Competitions :</h4>
+                      <!--Blow 5-->
+                      <div id="below" style="display: none;">
+                        <label class="checkbox-inline" for="checkboxs-1">
+                          <input type="checkbox" id="checkboxs-12"  name="entry.1276510615"  value="0" onchange="button();" disabled>
+                          FANCY DRESS
+                          <h5>Any characters from bible</h5>
+                          <instructions>Instructions
+                            <ul>
+                              <li>Should be dressed up as a bible character</li>
+                            </ul></instructions>
+                        </label>
+                        </div>
+            <!--beginner-->
+            <div id="beginner" style="display: none;">
+            <label class="checkbox-inline" for="checkboxs-0">
+              <input type="checkbox" id="checkboxs-0" name="entry.1276510615" value="1" onchange="button();" disabled>
+              MEMORY VERSE
+              <h5>Psalms 1 Or 23 (6 verses)</h5>
+              <instructions>Instructions
+                <ul>
+                  <li>Bile Versions: KJV/ NKJV/ NIV</li>
+                </ul>
+              </instructions>
+            </label> <br>
+            <label class="checkbox-inline" for="checkboxs-1">
+              <input type="checkbox" id="checkboxs-1"  name="entry.1967439349"  value="2" onchange="button();" disabled>
+              DRESS UP
+              <h5>Any characters from bible</h5>
+              <instructions>Instructions
+                <ul>
+                  <li>Should be dressed up as a bible character</li>
+                  <li>Should give an introduction of the bible character and speak for 1 min</li>
+                </ul></instructions>
+            </label>
+          </div>
+
+            <!--Primary-->
+            <div id="primary" style="display: none;" >
+            <label class="checkbox-inline" for="checkboxs-0">
+              <input type="checkbox" id="checkboxs-3" name="entry.2071632221" value="3" onchange="button();" disabled>
+              MEMORY VERSE
+              <h5>Psalms 146 (10 verses)</h5>
+              <instructions>Instructions
+                <ul>
+                  <li>Bile Versions: KJV/ NKJV/ NIV</li>
+                </ul>
+              </instructions>
+            </label> <br>
+            <label class="checkbox-inline" for="checkboxs-1">
+              <input type="checkbox" id="checkboxs-4" name="entry.536179819" value="4" onchange="button();" disabled>
+              CHARACTER INTRODUCTION
+              <h5>12 Disciples</h5>
+              <instructions>Instructions
+              <ul>
+                <li>Should be dressed up as disciples</li>
+                <li>Should speak for 2 mins</li>
+              </ul></instructions>
+            </label> 
+          </div>
+
+                      <!--Junior-->
+                      <div id="junior" style="display: none;">
+                        <label class="checkbox-inline" for="checkboxs-0">
+                          <input type="checkbox" id="checkboxs-5" name="entry.1916613118" value="5" onchange="button();" disabled>
+                          MEMORY VERSE
+                          <h5>Psalms 34 (22 verses)</h5>
+                          <instructions>Instructions
+                            <ul>
+                              <li>Bile Versions: KJV/ NKJV/ NIV</li>
+                            </ul>
+                          </instructions>
+                        </label> <br>
+                        <label class="checkbox-inline" for="checkboxs-1">
+                          <input type="checkbox" id="checkboxs-6" name="entry.1910167930" value="6" onchange="button();" disabled>
+                          BIBLE QUIZ
+                          <h5>Mark 1 to 10</h5>
+                          <instructions>Instructions
+                            <ul>
+                              <li>Bile Versions: KJV/ NKJV</li>
+                            </ul>
+                          </instructions>
+                        </label> 
+                      </div>
+
+                      <!--Inter-->
+                      <div id="inter" style="display: none;">
+                        <label class="checkbox-inline" for="checkboxs-0">
+                          <input type="checkbox" id="checkboxs-7" name="entry.2054808926" value="7" onchange="button();" disabled>
+                          MEMORY VERSE
+                          <h5>John 15 (27 verses)</h5>
+                          <instructions>Instructions
+                            <ul>
+                              <li>Bile Versions: KJV/ NKJV/ NIV</li>
+                            </ul>
+                          </instructions>
+                        </label> <br>
+                        <label class="checkbox-inline" for="checkboxs-1">
+                          <input type="checkbox" id="checkboxs-8" name="entry.1019522143" value="8" onchange="button();" disabled>
+                          BIBLE QUIZ
+                          <h5>Matthew 1 to 15</h5>
+                          <instructions>Instructions
+                            <ul>
+                              <li>Bile Versions: KJV/ NKJV</li>
+                            </ul>
+                          </instructions>
+                        </label> 
+                      </div>  
+
+                      <!--senior-->
+                      <div id="senior" style="display: none;">
+                        <label class="checkbox-inline" for="checkboxs-0">
+                          <input type="checkbox" id="checkboxs-9" name="entry.1961294929" value="9" onchange="button();" disabled>
+                          MEMORY VERSE
+                          <h5>1 Corinthians 13 (13 verses)</h5>
+                          <instructions>Instructions
+                            <ul>
+                              <li>Bile Versions: KJV/ NKJV/ NIV</li>
+                            </ul>
+                          </instructions>
+                        </label> <br>
+                        <label class="checkbox-inline" for="checkboxs-1">
+                          <input type="checkbox" id="checkboxs-10" name="entry.988623494" value="10" onchange="button();" disabled>
+                          BIBLE QUIZ
+                          <h5>The Book of JUDGES</h5>
+                          <instructions>Instructions
+                            <ul>
+                              <li>Bile Versions: KJV/ NKJV</li>
+                            </ul>
+                          </instructions>
+                        </label> 
+                      </div> 
+                      
+                      <!--seniorhigh-->
+                      <div id="senior_high" style="display: none;">
+                        <label class="checkbox-inline" for="checkboxs-1">
+                          <input type="checkbox" id="checkboxs-11" name="entry.287871955" value="11" onchange="button();" disabled>
+                          BIBLE QUIZ
+                          <h5>The Book of ACTS</h5>
+                          <instructions>Instructions
+                            <ul>
+                              <li>Bile Versions: KJV/ NKJV</li>
+                            </ul>
+                          </instructions>
+                        </label> 
+                      </div>                        
+          </fieldset>
+          <fieldset>
+            <button name="submit" type="submit" id="submit" data-submit="...Sending" disabled>Submit</button>
+          </fieldset>
+        </form>
+      </div>
+  </div>
+
+  <div class="col-3 col-s-12 menu">
+    <ul style="text-align: center;">
+      <li><h2>Last Date of Registration:</h2><br>
+      <h4 style="margin-top: -10px;">23rd September 2021</h4>
+      </li>
+    </ul>
+    
+  </div>
+ 
+  <div class="col-3 col-s-12">
+    <div class="aside">
+      <h2>Bible Versions to be followed: </h2><hr><br>
+      <h3> Quiz : KJV / NKJV</h3><br>
+      <h3>Memory verse : KJV/ NKJV /NIV</h3>
+    </div></div>
+    
+</div>
+
+<div class="footer">
+  <h1 ><u>Contacts :</u></h1>
+
+    <h2 style="margin-top: -20px;" class="col-6 col-s-5">> Mr.WESLEY : +91 9840466158</h2>
+    <h2 style="margin-top: -20px;" class="col-6 col-s-12">> Mr.JAYKAR : +91 9500086773</h2>
+ 
+</div>
+<script>
+  function Display(){
+    var date = document.getElementById("docb").value;
+// to print the input here
+if(("2018-02-28">=date)&&(date>="2015-03-01")){
+userName="beginner";
+document.getElementById("hidden").style.display="block";
+document.getElementById("beginner").style.display="block";
+document.getElementById("primary").style.display="none";
+document.getElementById("junior").style.display="none";
+document.getElementById("inter").style.display="none";
+document.getElementById("senior").style.display="none";
+document.getElementById("senior_high").style.display="none";
+document.getElementById("below").style.display="none";
+document.getElementById("checkboxs-12").disabled=true;
+document.getElementById("checkboxs-0").disabled=false;
+document.getElementById("checkboxs-1").disabled=false;
+document.getElementById("checkboxs-3").disabled=true;
+document.getElementById("checkboxs-4").disabled=true;
+document.getElementById("checkboxs-5").disabled=true;
+document.getElementById("checkboxs-6").disabled=true;
+document.getElementById("checkboxs-7").disabled=true;
+document.getElementById("checkboxs-8").disabled=true;
+document.getElementById("checkboxs-9").disabled=true;
+document.getElementById("checkboxs-10").disabled=true;
+document.getElementById("checkboxs-11").disabled=true;
+}
+else if((date>="2018-03-01")){
+userName="below 5";
+document.getElementById("hidden").style.display="block";
+document.getElementById("beginner").style.display="none";
+document.getElementById("primary").style.display="none";
+document.getElementById("junior").style.display="none";
+document.getElementById("inter").style.display="none";
+document.getElementById("senior").style.display="none";
+document.getElementById("senior_high").style.display="none";
+document.getElementById("below").style.display="block";
+document.getElementById("checkboxs-12").disabled=false;
+document.getElementById("checkboxs-0").disabled=true;
+document.getElementById("checkboxs-1").disabled=true;
+document.getElementById("checkboxs-3").disabled=true;
+document.getElementById("checkboxs-4").disabled=true;
+document.getElementById("checkboxs-5").disabled=true;
+document.getElementById("checkboxs-6").disabled=true;
+document.getElementById("checkboxs-7").disabled=true;
+document.getElementById("checkboxs-8").disabled=true;
+document.getElementById("checkboxs-9").disabled=true;
+document.getElementById("checkboxs-10").disabled=true;
+document.getElementById("checkboxs-11").disabled=true;
+}
+else if(("2015-02-28">=date)&&(date>="2012-03-01")){
+userName="Primary";
+document.getElementById("hidden").style.display="block";
+document.getElementById("beginner").style.display="none";
+document.getElementById("primary").style.display="block";
+document.getElementById("junior").style.display="none";
+document.getElementById("inter").style.display="none";
+document.getElementById("senior").style.display="none";
+document.getElementById("senior_high").style.display="none";
+document.getElementById("below").style.display="none";
+document.getElementById("checkboxs-12").disabled=true;
+document.getElementById("checkboxs-0").disabled=true;
+document.getElementById("checkboxs-1").disabled=true;
+document.getElementById("checkboxs-3").disabled=false;
+document.getElementById("checkboxs-4").disabled=false;
+document.getElementById("checkboxs-5").disabled=true;
+document.getElementById("checkboxs-6").disabled=true;
+document.getElementById("checkboxs-7").disabled=true;
+document.getElementById("checkboxs-8").disabled=true;
+document.getElementById("checkboxs-9").disabled=true;
+document.getElementById("checkboxs-10").disabled=true;
+document.getElementById("checkboxs-11").disabled=true;
+}
+else if(("2012-02-28">=date)&&(date>="2009-03-01")){
+userName="Junior";
+document.getElementById("beginner").style.display="none";
+document.getElementById("primary").style.display="none";
+document.getElementById("hidden").style.display="block";
+document.getElementById("junior").style.display="block";
+document.getElementById("inter").style.display="none";
+document.getElementById("senior").style.display="none";
+document.getElementById("senior_high").style.display="none";
+document.getElementById("below").style.display="none";
+document.getElementById("checkboxs-12").disabled=true;
+document.getElementById("checkboxs-0").disabled=true;
+document.getElementById("checkboxs-1").disabled=true;
+document.getElementById("checkboxs-3").disabled=true;
+document.getElementById("checkboxs-4").disabled=true;
+document.getElementById("checkboxs-5").disabled=false;
+document.getElementById("checkboxs-6").disabled=false;
+document.getElementById("checkboxs-7").disabled=true;
+document.getElementById("checkboxs-8").disabled=true;
+document.getElementById("checkboxs-9").disabled=true;
+document.getElementById("checkboxs-10").disabled=true;
+document.getElementById("checkboxs-11").disabled=true;
+}
+else if(("2009-02-29">=date)&&(date>="2006-03-01")){
+userName="Intermediate";
+document.getElementById("beginner").style.display="none";
+document.getElementById("primary").style.display="none";
+document.getElementById("junior").style.display="none";
+document.getElementById("hidden").style.display="block";
+document.getElementById("inter").style.display="block";
+document.getElementById("senior").style.display="none";
+document.getElementById("senior_high").style.display="none";
+document.getElementById("below").style.display="none";
+document.getElementById("checkboxs-12").disabled=true;
+document.getElementById("checkboxs-0").disabled=true;
+document.getElementById("checkboxs-1").disabled=true;
+document.getElementById("checkboxs-3").disabled=true;
+document.getElementById("checkboxs-4").disabled=true;
+document.getElementById("checkboxs-5").disabled=true;
+document.getElementById("checkboxs-6").disabled=true;
+document.getElementById("checkboxs-7").disabled=false;
+document.getElementById("checkboxs-8").disabled=false;
+document.getElementById("checkboxs-9").disabled=true;
+document.getElementById("checkboxs-10").disabled=true;
+document.getElementById("checkboxs-11").disabled=true;
+}
+else if(("2006-02-28">=date)&&(date>="2003-03-01")){
+userName="Senior";
+document.getElementById("hidden").style.display="block";
+document.getElementById("beginner").style.display="none";
+document.getElementById("primary").style.display="none";
+document.getElementById("junior").style.display="none";
+document.getElementById("inter").style.display="none";
+document.getElementById("senior").style.display="block";
+document.getElementById("senior_high").style.display="none";
+document.getElementById("below").style.display="none";
+document.getElementById("checkboxs-12").disabled=true;
+document.getElementById("checkboxs-0").disabled=true;
+document.getElementById("checkboxs-1").disabled=true;
+document.getElementById("checkboxs-3").disabled=true;
+document.getElementById("checkboxs-4").disabled=true;
+document.getElementById("checkboxs-5").disabled=true;
+document.getElementById("checkboxs-6").disabled=true;
+document.getElementById("checkboxs-7").disabled=true;
+document.getElementById("checkboxs-8").disabled=true;
+document.getElementById("checkboxs-9").disabled=false;
+document.getElementById("checkboxs-10").disabled=false;
+document.getElementById("checkboxs-11").disabled=true;
+}
+else if(("2003-02-28">=date)&&(date>="2000-03-01")){
+userName="Senior High";
+document.getElementById("hidden").style.display="block";
+document.getElementById("beginner").style.display="none";
+document.getElementById("primary").style.display="none";
+document.getElementById("junior").style.display="none";
+document.getElementById("inter").style.display="none";
+document.getElementById("senior").style.display="none";
+document.getElementById("senior_high").style.display="block";
+document.getElementById("below").style.display="none";
+document.getElementById("checkboxs-12").disabled=true;
+document.getElementById("checkboxs-0").disabled=true;
+document.getElementById("checkboxs-1").disabled=true;
+document.getElementById("checkboxs-3").disabled=true;
+document.getElementById("checkboxs-4").disabled=true;
+document.getElementById("checkboxs-5").disabled=true;
+document.getElementById("checkboxs-6").disabled=true;
+document.getElementById("checkboxs-7").disabled=true;
+document.getElementById("checkboxs-8").disabled=true;
+document.getElementById("checkboxs-9").disabled=true;
+document.getElementById("checkboxs-10").disabled=true;
+document.getElementById("checkboxs-11").disabled=false;
+}
+else{
+  document.getElementById("hidden").style.display="none";
+document.getElementById("beginner").style.display="none";
+document.getElementById("primary").style.display="none";
+document.getElementById("junior").style.display="none";
+document.getElementById("inter").style.display="none";
+document.getElementById("senior").style.display="none";
+document.getElementById("senior_high").style.display="none";
+document.getElementById("below").style.display="none";
+document.getElementById("checkboxs-12").disabled=true;
+document.getElementById("checkboxs-0").disabled=true;
+document.getElementById("checkboxs-1").disabled=true;
+document.getElementById("checkboxs-3").disabled=true;
+document.getElementById("checkboxs-4").disabled=true;
+document.getElementById("checkboxs-5").disabled=true;
+document.getElementById("checkboxs-6").disabled=true;
+document.getElementById("checkboxs-7").disabled=true;
+document.getElementById("checkboxs-8").disabled=true;
+document.getElementById("checkboxs-9").disabled=true;
+document.getElementById("checkboxs-10").disabled=true;
+document.getElementById("checkboxs-11").disabled=true;
+}}
+
+function button(){
+      if((document.getElementById("checkboxs-0").checked==true)||(document.getElementById("checkboxs-1").checked==true)||(document.getElementById("checkboxs-3").checked==true)||(document.getElementById("checkboxs-4").checked==true)||(document.getElementById("checkboxs-5").checked==true)||(document.getElementById("checkboxs-6").checked==true)||(document.getElementById("checkboxs-7").checked==true)||(document.getElementById("checkboxs-8").checked==true)||(document.getElementById("checkboxs-9").checked==true)||(document.getElementById("checkboxs-10").checked==true)||(document.getElementById("checkboxs-11").checked==true)||(document.getElementById("checkboxs-12").checked==true)){
+        document.getElementById("submit").disabled = false;
+      }
+      else{
+        document.getElementById("submit").disabled = true;
+        console.log("no");
+      }
+      }
+
+
+</script>
+</body>
+</html>
