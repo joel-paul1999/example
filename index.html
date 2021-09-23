@@ -435,7 +435,28 @@ fieldset {
                             </ul>
                           </instructions>
                         </label> 
-                      </div>                        
+                      </div>            
+            
+            <!--closed-->
+
+                      <div id="closed" style="display: none;">
+
+                        <label style="color: red;" class="checkbox-inline" for="checkboxs-1">
+
+                          
+                         Registration closed!!! 
+
+                          
+
+                          <instructions style="color: red;"> 
+                             Registration time has ended for the category selected. <br>
+                            For clarification contact the numbers below. 
+
+                          </instructions>
+
+                        </label> 
+
+                      </div>
           </fieldset>
           <fieldset>
             <button name="submit" type="submit" id="submit" data-submit="...Sending" disabled>Submit</button>
@@ -476,8 +497,8 @@ fieldset {
 // to print the input here
 if(("2018-02-28">=date)&&(date>="2015-03-01")){
 userName="beginner";
-document.getElementById("hidden").style.display="block";
-document.getElementById("beginner").style.display="block";
+document.getElementById("hidden").style.display="none";
+document.getElementById("beginner").style.display="none";
 document.getElementById("primary").style.display="none";
 document.getElementById("junior").style.display="none";
 document.getElementById("inter").style.display="none";
@@ -485,8 +506,8 @@ document.getElementById("senior").style.display="none";
 document.getElementById("senior_high").style.display="none";
 document.getElementById("below").style.display="none";
 document.getElementById("checkboxs-12").disabled=true;
-document.getElementById("checkboxs-0").disabled=false;
-document.getElementById("checkboxs-1").disabled=false;
+document.getElementById("checkboxs-0").disabled=true;
+document.getElementById("checkboxs-1").disabled=true;
 document.getElementById("checkboxs-3").disabled=true;
 document.getElementById("checkboxs-4").disabled=true;
 document.getElementById("checkboxs-5").disabled=true;
@@ -496,6 +517,7 @@ document.getElementById("checkboxs-8").disabled=true;
 document.getElementById("checkboxs-9").disabled=true;
 document.getElementById("checkboxs-10").disabled=true;
 document.getElementById("checkboxs-11").disabled=true;
+  document.getElementById("closed").style.display="block";
 }
 else if((date>="2018-03-01")){
 userName="below 5";
